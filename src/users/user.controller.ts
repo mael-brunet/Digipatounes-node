@@ -46,14 +46,8 @@ export class UsersController {
   } 
 
   @Delete(':id')
-  async delete(@Param('id') id: string) {
-    return await this.usersService.delete(id);
+  async remove(@Param('id') id: string) {
+    return await this.usersService.remove(id);
   }
-
-  @Get('/utils/:username')
-  findUsername(@Param('username') username: string): Promise<User> {
-    return this.usersService.findByUsername(username);
-  }
-  
   
 }

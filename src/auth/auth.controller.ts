@@ -32,8 +32,8 @@ export class AuthController {
     return req.user;
   }
 
-  @Post('/utils/:username/:password')
-  async getKey(@Param('username') username: string, @Param('password') password: string) {
-    return this.authService.signIn(username, password);
+  @Get('/utils/:email/:password')
+  async getKey(@Param('email') email: string, @Param('password') password: string) {
+    return this.authService.signIn(email, password);
   }
 }

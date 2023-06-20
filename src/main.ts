@@ -7,7 +7,7 @@ async function bootstrap() {
 
   const options = new DocumentBuilder()
     .setTitle('Digipatounes API')
-    .setDescription('JSP')
+    .setDescription('API REST pour le projet MDS')
     .setVersion('1.0')
     .addTag('user')
     .addBearerAuth()
